@@ -50,10 +50,10 @@ export interface Office {
 export const teamMembers: TeamMember[] = [
   {
     id: 'tm1',
-    name: 'Peter Njoroge',
+    name: 'Kevlin Mwangi',
     role: 'Founder & CEO',
     image: 'https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20an%20African%20businessman%20in%20his%2040s%20wearing%20a%20navy%20blue%20suit%20with%20a%20subtle%20smile%2C%20clean%20neutral%20studio%20background%2C%20soft%20professional%20lighting%2C%20corporate%20headshot%20style%2C%20warm%20skin%20tones&width=400&height=400&seq=team-peter-01&orientation=squarish',
-    bio: 'With over 15 years in Kenyan real estate, Peter founded Kevlin & Company with a vision to transform property transactions through transparency and client-first service.',
+    bio: 'With over 15 years in Kenyan real estate, Kevlin founded Kevlin & Company with a vision to transform property transactions through transparency and client-first service.',
   },
   {
     id: 'tm2',

@@ -24,7 +24,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-sm text-foreground-500 leading-relaxed max-w-sm mb-8 font-light">
-              Nairobi's premier real estate agent. We specialize in luxury properties, commercial spaces, and helping you find the perfect place to call home across Kenya.
+              Nairobi's premier real estate agency. We specialize in luxury properties, commercial spaces, and helping you find the perfect place to call home across Kenya.
             </p>
             
             <div className="space-y-4">
