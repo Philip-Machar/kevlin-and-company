@@ -14,10 +14,10 @@ interface SEOProps {
 export default function SEO({ 
   title, 
   description, 
-  name = "Prince Wa Properties", 
+  name = "Kevlin & Company", 
   type = "website", 
   image = "/logo.jpg", 
-  url = "https://www.Prince homes.com", 
+  url = "https://www.Kevlinhomes.com", 
   schema 
 }: SEOProps) {
   return (
@@ -35,7 +35,7 @@ export default function SEO({
       <meta property="og:image" content={image} />
 
       {/* Twitter tags */}
-      <meta name="twitter:creator" content="@Prince Homes" />
+      <meta name="twitter:creator" content="@KevlinHomes" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

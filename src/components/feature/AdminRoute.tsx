@@ -9,7 +9,7 @@ export default function AdminRoute({ children }: { children: React.ReactNode }) 
 
   // Check if the admin is already authenticated in this session
   useEffect(() => {
-    const auth = sessionStorage.getItem('Prince _admin_auth');
+    const auth = sessionStorage.getItem('Kevlin_admin_auth');
     if (auth === 'true') {
       setIsAuthenticated(true);
     }
@@ -18,7 +18,7 @@ export default function AdminRoute({ children }: { children: React.ReactNode }) 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === 'password123') {
-      sessionStorage.setItem('Prince _admin_auth', 'true');
+      sessionStorage.setItem('Kevlin_admin_auth', 'true');
       setIsAuthenticated(true);
     } else {
       setError('Incorrect password. Access denied.');

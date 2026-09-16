@@ -4,16 +4,26 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/feature/Navbar';
 import Footer from '@/components/feature/Footer';
 import { seedBlogDatabase } from '@/utils/seedBlog';
+import { seedDatabase } from '@/utils/seedDatabase';
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
   const [seedingBlogs, setSeedingBlogs] = useState(false);
+  const [seedingProperties, setSeedingProperties] = useState(false);
 
   const handleSeedBlogs = async () => {
     if (window.confirm("Are you sure you want to upload the 10 editorial articles to Firebase?")) {
       setSeedingBlogs(true);
       await seedBlogDatabase();
       setSeedingBlogs(false);
+    }
+  };
+
+  const handleSeedProperties = async () => {
+    if (window.confirm("Are you sure you want to upload the dummy properties to Firebase?")) {
+      setSeedingProperties(true);
+      await seedDatabase();
+      setSeedingProperties(false);
     }
   };
 
@@ -92,18 +102,31 @@ export default function AdminDashboard() {
           </div>
 
           {/* TEMPORARY DEVELOPER TOOL */}
-          {/* <div className="mt-20 pt-10 border-t border-black/5 text-center">
-            <button 
-              onClick={handleSeedBlogs}
-              disabled={seedingBlogs}
-              className="px-6 py-2 bg-purple-50 text-purple-600 border border-purple-200 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-purple-100 transition-colors disabled:opacity-50"
-            >
-              {seedingBlogs ? <><i className="ri-loader-4-line animate-spin mr-2" /> Seeding Articles...</> : <><i className="ri-article-line mr-2" /> Developer: Seed Articles (10)</>}
-            </button>
-            <p className="text-[10px] text-foreground-400 mt-4 max-w-md mx-auto">
-              Clicking this will upload the 10 pre-written articles directly to Firebase. Once complete, you can remove this button from the code.
+          <div className="mt-20 pt-10 border-t border-black/5 text-center">
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground-400 mb-4">
+              Developer Tools
+            </h3>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button 
+                onClick={handleSeedProperties}
+                disabled={seedingProperties}
+                className="px-6 py-2 bg-blue-50 text-blue-600 border border-blue-200 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-100 transition-colors disabled:opacity-50"
+              >
+                {seedingProperties ? <><i className="ri-loader-4-line animate-spin mr-2" /> Seeding Properties...</> : <><i className="ri-building-4-line mr-2" /> Seed Properties (36)</>}
+              </button>
+              
+              <button 
+                onClick={handleSeedBlogs}
+                disabled={seedingBlogs}
+                className="px-6 py-2 bg-purple-50 text-purple-600 border border-purple-200 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-purple-100 transition-colors disabled:opacity-50"
+              >
+                {seedingBlogs ? <><i className="ri-loader-4-line animate-spin mr-2" /> Seeding Articles...</> : <><i className="ri-article-line mr-2" /> Seed Articles (10)</>}
+              </button>
+            </div>
+            <p className="text-[10px] text-foreground-400 mt-4 max-w-md mx-auto leading-relaxed">
+              Clicking these will upload the pre-written dummy data directly to Firebase. Once complete, you can remove this section from the code.
             </p>
-          </div> */}
+          </div>
 
         </div>
       </section>

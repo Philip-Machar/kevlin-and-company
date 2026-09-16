@@ -54,7 +54,7 @@ export default function PostPage() {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Prince Wa Properties",
+      "name": "Kevlin & Company",
       "logo": {
         "@type": "ImageObject",
         "url": "/logo.jpg"
@@ -66,7 +66,7 @@ export default function PostPage() {
   return (
     <div className="min-h-screen bg-background-50">
       <SEO 
-        title={`${post.title} | Prince Wa Properties Insights`}
+        title={`${post.title} | Kevlin & Company Insights`}
         description={post.excerpt}
         image={post.image}
         type="article"
