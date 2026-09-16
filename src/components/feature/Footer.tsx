@@ -135,12 +135,12 @@ export default function Footer() {
               { 
                 icon: 'ri-facebook-fill', 
                 label: 'Facebook', 
-                href: 'https://www.facebook.com/profile.php?id=61591653432227#' 
+                href: 'https://www.facebook.com/KevinCompanyRealEstate/?ref=PROFILE_EDIT_xav_ig_profile_page_web#' 
               },
               { 
                 icon: 'ri-instagram-line', 
                 label: 'Instagram', 
-                href: 'https://www.instagram.com/prince_wa_properties/' 
+                href: 'https://www.instagram.com/kevlin_company/' 
               }
             ].map((social) => (
               <a 
