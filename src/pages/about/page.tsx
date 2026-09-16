@@ -242,7 +242,7 @@ export default function AboutPage() {
                   <span className="text-white font-heading font-bold text-xl">PN</span>
                 </div>
                 <div>
-                  <p className="text-white font-bold tracking-wide">Peter Njoroge</p>
+                  <p className="text-white font-bold tracking-wide">Kevlin Mwangi</p>
                   <p className="text-primary-400 text-xs font-bold uppercase tracking-widest mt-1">Founder & Managing Director</p>
                 </div>
               </div>
